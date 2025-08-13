@@ -69,6 +69,12 @@ class OTPScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Pinput(
+                onSubmitted: (value) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()),
+                  );
+                },
                 onCompleted: (value) {
                   Navigator.push(
                     context,

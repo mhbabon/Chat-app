@@ -1,10 +1,13 @@
 import 'package:chatapp/domain/constrains/appcolors.dart';
+import 'package:chatapp/repository/screens/bottomnavigation/bottomnavigationscreen.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
   TextEditingController firstNameController = TextEditingController();
   TextEditingController lastNameController = TextEditingController();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +55,9 @@ class ProfileScreen extends StatelessWidget {
       ),
       floatingActionButton: UiHelper.CustomButton(
         buttonname: "Save",
-        callback: () {},
+        callback: () {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationScreen() ));
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
